@@ -15,8 +15,13 @@ class Footer extends Component{
     }
 
     state = {
-        name: 'Diego Go',
-        city: 'Toledo'
+        name: '',
+        city: ''
+    }
+
+    componentDidMount(){
+        this.setState({name: 'Diego Go'});
+        this.setState({city: 'Toledo'})
     }
 
     message = evt => {
