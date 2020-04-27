@@ -16,20 +16,17 @@ class Footer extends Component{
 
     state = {
         name: '',
-        city: ''
+        city: 'Toledo'
     }
 
     componentDidMount(){
         this.setState({name: 'Diego Go'});
-        this.setState({city: 'Toledo'})
     }
 
     message = evt => {
         
         this.setState({name: evt.target.value});
-        this.setState({city: evt.target.value});
         console.log(this.state.name);
-        console.log(this.state.city);
     }
 
     render(){
@@ -39,6 +36,7 @@ class Footer extends Component{
                 <p>{this.props.page}</p>
                 <input value={this.state.name} onChange={this.message} />
                 <input value={this.state.city} onChange={this.city} />
+                {this.state.city === 'Toledo' ? "Sim Toledo": "Nao, sou de outro lugar"}
             </div>
         )
     }
